@@ -1,0 +1,6 @@
+usr/local/bin/nshc-qt usr/bin
+share/pixmaps/nshc32.xpm usr/share/pixmaps
+share/pixmaps/nshc16.xpm usr/share/pixmaps
+share/pixmaps/nshc128.png usr/share/pixmaps
+debian/nshc-qt.desktop usr/share/applications
+debian/nshc-qt.protocol usr/share/kde4/services/

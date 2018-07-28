@@ -1,0 +1,22 @@
+[Unit]
+Description=NSHCoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=nshccore
+Group=nshccore
+
+Type=forking
+PIDFile=/var/lib/nshcd/nshcd.pid
+ExecStart=/usr/bin/nshcd -daemon -pid=/var/lib/nshcd/nshcd.pid \
+-conf=/etc/nshccore/nshc.conf -datadir=/var/lib/nshcd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

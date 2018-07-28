@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=NSHCoin
+Comment=NSHCoin P2P Cryptocurrency
+Exec=nshc-qt %u
+Terminal=false
+Type=Application
+Icon=nshc128
+MimeType=x-scheme-handler/nshc;
+Categories=Office;Finance;
+Name[en_US]=nshc-qt.desktop
