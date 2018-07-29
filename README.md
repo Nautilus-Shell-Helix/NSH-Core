@@ -1,4 +1,4 @@
-<img src="https://gitlab.nshelix.io/nshelix/nshcore/raw/master/src/qt/res/images/drkblue/splash.png" halign="center" valign="center" hspace="0">
+<img src="https://gitlab.nshelix.io/nshelix/nshcore/raw/master/src/qt/res/images/drkblue/splash.png" halign="center" valign="center" hspace="250px">
 
 
 
