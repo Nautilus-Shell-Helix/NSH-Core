@@ -59,8 +59,8 @@ public:
     enum Unit
     {
         NSHC,
-        mSTM,
-        uSTM,
+        mNSHC,
+        uNSHC,
         duffs
     };
 

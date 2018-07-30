@@ -21,8 +21,8 @@ QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
     unitlist.append(NSHC);
-    unitlist.append(mSTM);
-    unitlist.append(uSTM);
+    unitlist.append(mNSHC);
+    unitlist.append(uNSHC);
     unitlist.append(duffs);
     return unitlist;
 }
@@ -32,8 +32,8 @@ bool BitcoinUnits::valid(int unit)
     switch(unit)
     {
     case NSHC:
-    case mSTM:
-    case uSTM:
+    case mNSHC:
+    case uNSHC:
     case duffs:
         return true;
     default:
@@ -48,8 +48,8 @@ QString BitcoinUnits::name(int unit)
         switch(unit)
         {
             case NSHC: return QString("NSHC");
-            case mSTM: return QString("mSTM");
-            case uSTM: return QString::fromUtf8("μNSHC");
+            case mNSHC: return QString("mNSHC");
+            case uNSHC: return QString::fromUtf8("μNSHC");
             case duffs: return QString("duffs");
             default: return QString("???");
         }
@@ -58,9 +58,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case NSHC: return QString("tSTM");
-            case mSTM: return QString("mtSTM");
-            case uSTM: return QString::fromUtf8("μtSTM");
+            case NSHC: return QString("tNSHC");
+            case mNSHC: return QString("mtNSHC");
+            case uNSHC: return QString::fromUtf8("μtNSHC");
             case duffs: return QString("tduffs");
             default: return QString("???");
         }
@@ -74,8 +74,8 @@ QString BitcoinUnits::description(int unit)
         switch(unit)
         {
             case NSHC: return QString("NSHCoin");
-            case mSTM: return QString("Milli-NSHCoin (1 / 1" THIN_SP_UTF8 "000)");
-            case uSTM: return QString("Micro-NSHCoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case mNSHC: return QString("Milli-NSHCoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uNSHC: return QString("Micro-NSHCoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-NSHCoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -85,8 +85,8 @@ QString BitcoinUnits::description(int unit)
         switch(unit)
         {
             case NSHC: return QString("TestStims");
-            case mSTM: return QString("Milli-TestStim (1 / 1" THIN_SP_UTF8 "000)");
-            case uSTM: return QString("Micro-TestStim (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case mNSHC: return QString("Milli-TestStim (1 / 1" THIN_SP_UTF8 "000)");
+            case uNSHC: return QString("Micro-TestStim (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-TestStim (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -98,8 +98,8 @@ qint64 BitcoinUnits::factor(int unit)
     switch(unit)
     {
     case NSHC:  return 100000000;
-    case mSTM: return 100000;
-    case uSTM: return 100;
+    case mNSHC: return 100000;
+    case uNSHC: return 100;
     case duffs: return 1;
     default:   return 100000000;
     }
@@ -110,8 +110,8 @@ int BitcoinUnits::decimals(int unit)
     switch(unit)
     {
     case NSHC: return 8;
-    case mSTM: return 5;
-    case uSTM: return 2;
+    case mNSHC: return 5;
+    case uNSHC: return 2;
     case duffs: return 0;
     default: return 0;
     }
